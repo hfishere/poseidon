@@ -70,26 +70,55 @@ html, body {
     </div>
 </div>
 
-<div class="w3-margin">
-    <table class="w3-table-all" style="width: 50%">
-        <thead>
-            <tr class="w3-red">
-                <th>First Name</th>
-                <th>Last Name</th>
-            </tr>
-        </thead>
-        <tr>
-            <td>Hafidz</td>
-            <td>Fairiz</td>
-        </tr>
-        <tr>
-            <td>Ahsani</td>
-            <td>Ashri</td>
-        </tr>
-    </table>
+<div class="w3-row">
+
+    <div class="w3-container w3-half">
+        <div class="w3-margin w3-card-4" style="width: 100%">
+            <div class="w3-container w3-cyan">
+                <h1 class="w3-serif">Form Login</h1>
+            </div>
+            <form action="#" class="w3-container" id="form">
+                <input name="uname" type="text" class="w3-input" placeholder="Insert username" required>
+                <label class="w3-label w3-validate">Username</label>
+
+                <input name="pwd" type="password" class="w3-input" placeholder="Insert password" required>
+                <label class="w3-label w3-validate">Password</label>
+
+                <p>
+                <button onclick="formLogin(uname, pwd)" class="w3-btn w3-teal">Login</button></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="w3-container w3-half">
+        <div class="w3-margin w3-card-4">
+            <table class="w3-table-all" style="width: 100%">
+                <thead>
+                    <tr class="w3-red">
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Hafidz</td>
+                    <td>Fairiz</td>
+                </tr>
+                <tr>
+                    <td>Ahsani</td>
+                    <td>Ashri</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
 </div>
 
 
+<script>
+    function formLogin(uname, pwd) {
+        alert("Your username is " + uname.value + "and your Password is " + pwd.value);
+    }
+</script>
 <!--<footer class="w3-container w3-cyan">
     <h1>Footer</h1>
 </footer>-->
