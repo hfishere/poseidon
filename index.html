@@ -9,118 +9,160 @@ html, body {
 }
 </style>
 <body>
-<header class="w3-container w3-cyan">
-    <h1 class="w3-hover-text-white">Poseidon Project</h1>
-</header>
 
-<div class="w3-panel w3-pale-blue w3-leftbar w3-border-red">
-    <p>Just test this panel</p>
-</div>
+<nav class="w3-sidenav w3-dark-grey w3-card w3-animate-left" style="display: none" id="mySidenav">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large">Close &times;</a>
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+    <a href="#">Link 4</a>
+    <a href="#">Link 5</a>
+</nav>
 
-<div class="w3-panel"> 
-    <button class="w3-btn w3-cyan w3-border w3-round-xlarge w3-border-brown w3-hover-text-white">Button</button>
-</div>
+<!-- #konten disini -->
+<div id="main">
 
-<div class="w3-row-padding">
-    <div class="w3-third">
-        <h1>Card Example</h1>
-        <div class="w3-card-4 w3-center w3-dark-grey">
-            <div class="w3-container">
-                <h2>Avatar</h2>
-                <img src="img/adsadsd.jpg" alt="HF" style="width: 80%">
-                <h5>Hafidz Fairiz</h5>
+    <header class="w3-container w3-cyan">
+        <span class="w3-opennav w3-xlarge" onclick="w3_open()" id="openNav">&#9776;</span>
+        <h1 class="w3-hover-text-white">Poseidon Project</h1>
+    </header>
 
-                <div class="w3-section">
-                    <button class="w3-btn w3-green w3-hover-text-black">Yes</button>
-                    <button class="w3-btn w3-red w3-hover-text-black">No</button>
+    <div class="w3-panel w3-pale-blue w3-leftbar w3-border-red">
+        <p>Just test this panel</p>
+    </div>
+
+    <div class="w3-panel"> 
+        <button class="w3-btn w3-cyan w3-border w3-round-xlarge w3-border-brown w3-hover-text-white">Button</button>
+    </div>
+
+    <div class="w3-row-padding">
+        <div class="w3-third">
+            <h1>Card Example</h1>
+            <div class="w3-card-4 w3-center w3-dark-grey">
+                <div class="w3-container">
+                    <h2>Avatar</h2>
+                    <img src="img/adsadsd.jpg" alt="HF" style="width: 80%">
+                    <h5>Hafidz Fairiz</h5>
+
+                    <div class="w3-section">
+                        <button class="w3-btn w3-green w3-hover-text-black">Yes</button>
+                        <button class="w3-btn w3-red w3-hover-text-black">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-third">
+            <h1>Card Example</h1>
+            <div class="w3-card-4">
+                <header class="w3-container w3-light-grey">
+                    <h3>Hafidz Fairiz</h3>
+                </header>
+                <div class="w3-container">
+                    <p>1 new friend request</p>
+                    <hr>
+                    <img src="img/adsadsd.jpg" alt="HF" class="w3-left w3-circle w3-margin-right" style="width: 60px">
+                    <p>CEO at HF Technologies, Ltd. Expert as FrontEnd or BackEnd Developer. A Husband of the greatest Wife called Ahsani.</p><br>
+                </div>
+                <button class="w3-btn-block w3-dark-grey">+ Connect</button>
+            </div>
+        </div>
+
+        <div class="w3-third">
+            <h1>Card Example</h1>
+            <div class="w3-card-4">
+                <img src="img/Code1 1920x1080.png" alt="VSCode_pict" style="width: 100%">
+                <div class="w3-padding">
+                    <h3>Visual Studio Code</h3>
+                    <p>
+                        This tool is awesome!<br>
+                        Try now, and happy coding!<br> 
+                        <a href="https://code.visualstudio.com/">Go to Visual Studio Code</a>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="w3-third">
-        <h1>Card Example</h1>
-        <div class="w3-card-4">
-            <header class="w3-container w3-light-grey">
-                <h3>Hafidz Fairiz</h3>
-            </header>
-            <div class="w3-container">
-                <p>1 new friend request</p>
-                <hr>
-                <img src="img/adsadsd.jpg" alt="HF" class="w3-left w3-circle w3-margin-right" style="width: 60px">
-                <p>CEO at HF Technologies, Ltd. Expert as FrontEnd or BackEnd Developer. A Husband of the greatest Wife called Ahsani.</p><br>
-            </div>
-            <button class="w3-btn-block w3-dark-grey">+ Connect</button>
+    <div class="w3-container w3-row-half w3-margin-top">
+        <div class="w3-container w3-half">
+                <div class="w3-container w3-cyan">
+                    <h1 class="w3-serif">Form Login</h1>
+                </div>
+                <form action="#" class="w3-container" id="form">
+                    <input name="uname" type="text" class="w3-input" placeholder="Insert username" required>
+                    <label class="w3-label w3-validate">Username</label>
+
+                    <input name="pwd" type="password" class="w3-input" placeholder="Insert password" required>
+                    <label class="w3-label w3-validate">Password</label>
+
+                    <p>
+                    <button onclick="formLogin(uname, pwd)" class="w3-btn w3-teal">Login</button></p>
+                </form>
         </div>
-    </div>
 
-    <div class="w3-third">
-        <h1>Card Example</h1>
-        <div class="w3-card-4">
-            <img src="img/Code1 1920x1080.png" alt="VSCode_pict" style="width: 100%">
-            <div class="w3-padding">
-                <h3>Visual Studio Code</h3>
-                <p>
-                    This tool is awesome!<br>
-                    Try now, and happy coding!<br> 
-                    <a href="https://code.visualstudio.com/">Go to Visual Studio Code</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="w3-row-half w3-margin-top">
-
-    <div class="w3-container w3-half">
-        <!--<div class="w3-margin w3-card-4" style="width: 100%">-->
-            <div class="w3-container w3-cyan">
-                <h1 class="w3-serif">Form Login</h1>
-            </div>
-            <form action="#" class="w3-container" id="form">
-                <input name="uname" type="text" class="w3-input" placeholder="Insert username" required>
-                <label class="w3-label w3-validate">Username</label>
-
-                <input name="pwd" type="password" class="w3-input" placeholder="Insert password" required>
-                <label class="w3-label w3-validate">Password</label>
-
-                <p>
-                <button onclick="formLogin(uname, pwd)" class="w3-btn w3-teal">Login</button></p>
-            </form>
-        <!--</div>-->
-    </div>
-
-    <div class="w3-container w3-half">
-        <!--<div class="w3-margin w3-card-4">-->
-            <table class="w3-table-all" style="width: 100%">
-                <thead>
-                    <tr class="w3-red">
-                        <th>First Name</th>
-                        <th>Last Name</th>
+        <div class="w3-container w3-half">
+                <table class="w3-table-all" style="width: 100%">
+                    <thead>
+                        <tr class="w3-red">
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Hafidz</td>
+                        <td>Fairiz</td>
                     </tr>
-                </thead>
-                <tr>
-                    <td>Hafidz</td>
-                    <td>Fairiz</td>
-                </tr>
-                <tr>
-                    <td>Ahsani</td>
-                    <td>Ashri</td>
-                </tr>
-            </table>
-        <!--</div>-->
+                    <tr>
+                        <td>Ahsani</td>
+                        <td>Ashri</td>
+                    </tr>
+                </table>
+        </div>
     </div>
 
+    <div class="w3-container w3-half w3-border w3-border-brown" style="height: 350px">
+        <div class="w3-container w3-dark-grey">
+            <h2>Navbar Example</h2>            
+        </div>
+        <div class="w3-card-4">
+            <ul class="w3-navbar w3-border w3-brown">
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li class="w3-dropdown-hover"><a href="#">Menu 3</a>
+                    <div class="w3-dropdown-content">
+                        <a href="#">Dropdown 1</a>
+                        <a href="#">Dropdown 2</a>
+                        <a href="#">Dropdown 3</a>
+                    </div>
+                </li>
+                <li><a href="#">Menu 4</a></li>
+                <li><a href="#">Menu 5</a></li>
+            </ul>
+        </div>
+    </div>
 </div>
-
+<!-- /#konten -->
 
 <script>
     function formLogin(uname, pwd) {
         alert("Your username is " + uname.value + "and your Password is " + pwd.value);
     }
 </script>
-<!--<footer class="w3-container w3-cyan">
-    <h1>Footer</h1>
-</footer>-->
+
+<script>
+    function w3_open() {
+    document.getElementById("main").style.marginLeft = "25%";
+    document.getElementById("mySidenav").style.width = "25%";
+    document.getElementById("mySidenav").style.display = "block";
+    document.getElementById("openNav").style.display = 'none';
+    }
+    function w3_close() {
+    document.getElementById("main").style.marginLeft = "0%";
+    document.getElementById("mySidenav").style.display = "none";
+    document.getElementById("openNav").style.display = "inline-block";
+    }
+</script>
+
 </body>
 </html>
